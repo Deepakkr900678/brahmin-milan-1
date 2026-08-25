@@ -10,7 +10,7 @@ const personalDetailsSchema = new mongoose.Schema({
   disabilities: { type: String, required: false },
   heightFeet: { type: String, required: true },
   weight: { type: String, required: false },
-  timeOfBirth: { type: String, required: true },
+  timeOfBirth: { type: String },
   complexion: { type: String, required: false },
   manglikStatus: { type: String, required: false },
   qualification: { type: String, required: true },
@@ -22,7 +22,7 @@ const personalDetailsSchema = new mongoose.Schema({
   fatherName: { type: String, required: true },
   motherName: { type: String, required: false },
   fatherOccupation: { type: String, required: true },
-  fatherIncomeAnnually: { type: String, required: true },
+  fatherIncomeAnnually: { type: String },
   motherOccupation: { type: String, required: false },
   familyType: { type: String, required: true },
   siblings: { type: String, required: true },
@@ -40,8 +40,8 @@ const personalDetailsSchema = new mongoose.Schema({
   gotraSelf: { type: String, required: false },
   livingStatus: { type: String, required: false },
   partnerExpectations: { type: String, required: false },
-  closeUpPhoto: { 
-    type: [String], 
+  closeUpPhoto: {
+    type: [String],
     required: true,
     validate: {
       validator: (arr) => arr.length >= 1 && arr.length <= 3,
