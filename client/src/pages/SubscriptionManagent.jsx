@@ -443,6 +443,7 @@ const SubscriptionManagementPage = () => {
                       <p>Trial Period: {plan.trialPeriod} days</p>
                       <p>Duration: {plan.duration} months</p>
                       <p>Amount: ₹{plan.amount}</p>
+                      <img src={plan.photoUrl} alt="" />
                     </div>
                   )}
                 </div>

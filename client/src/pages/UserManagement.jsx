@@ -1010,6 +1010,7 @@ const UserManagementPage = () => {
   useEffect(() => {
     fetchUsers();
   }, []);
+  
   useEffect(() => {
     filterUsers();
   }, [searchQuery, selectedGender, selectedStatus, startDate, endDate, users]);
@@ -1429,9 +1430,9 @@ const UserManagementPage = () => {
         >
           <div className="space-y-6">
             <div className="flex justify-center">
-              {selectedUser.closeUpPhoto?.[0] ? (
+              {selectedUser.photoUrl?.[0] ? (
                 <img
-                  src={selectedUser.closeUpPhoto[0]}
+                  src={selectedUser.photoUrl[0]}
                   alt="User Photo"
                   className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 object-cover rounded-full shadow-md border-4 border-indigo-200"
                 />
